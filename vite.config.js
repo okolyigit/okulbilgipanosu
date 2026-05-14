@@ -8,7 +8,7 @@ function pagesRewrites() {
   const rewrites = [
     { match: /^\/giris\/?$/, to: '/login.html' },
     { match: /^\/kayit\/?$/, to: '/register.html' },
-    { match: /^\/demo\/?$/, to: '/demo.html' },
+    { match: /^\/demo\/?$/, to: '/demopano.html' },
     { match: /^\/[^/]+\/admin\/?$/, to: '/admin.html' },
     { match: /^\/[^/]+\/login\/?$/, to: '/login.html' },
     { match: /^\/[^/]+\/?$/, to: '/board.html' }
@@ -54,7 +54,7 @@ export default defineConfig({
         admin: resolve(__dirname, 'admin.html'),
         login: resolve(__dirname, 'login.html'),
         register: resolve(__dirname, 'register.html'),
-        demo: resolve(__dirname, 'demo.html')
+        demo: resolve(__dirname, 'demopano.html')
       }
     }
   }

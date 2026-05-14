@@ -5,7 +5,7 @@
 
 /giris         /login    200
 /kayit         /register 200
-/demo          /demo     200
+/demo          /demopano 200
 
 # Eski okul-özel login URL'i artık tek /giris sayfasına yönlensin
 /:slug/login   /giris    301
