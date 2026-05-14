@@ -1,9 +1,10 @@
 import { json, error, readBody } from '../../_lib/http.js';
 import { findSchoolBySlug, requireSchoolAuth } from '../../_lib/school.js';
 
-export const onRequestGet = async ({ env, params }) => {
-  const school = await findSchoolBySlug(env, params.slug);
-  if (!school) return error(404, 'Okul bulunamadı');
+export const onRequestGet = async (context) => {
+  const { school, response } = await requireSchoolAuth(context, context.params.slug);
+  if (response) return response;
+  const { env } = context;
 
   const [announcements, duty, ticker] = await Promise.all([
     env.DB.prepare(

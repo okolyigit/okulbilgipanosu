@@ -4,12 +4,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Okul Bilgi Panosu</title>
+  <title>Demo Pano — Okul Bilgi Panosu</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
+  <div class="demo-banner">
+    <span>Bu bir demo panodur — gerçek veri değildir.</span>
+    <a href="/kayit" class="demo-banner-btn">Kendi panonu oluştur →</a>
+  </div>
+
   <div class="dashboard-content" id="dashboard">
 
     <header class="header glass-panel">
@@ -58,35 +63,10 @@
     </footer>
   </div>
 
-  <div class="modal-overlay" id="settings-modal" hidden>
-    <div class="modal glass-panel">
-      <h2>Yönetici Paneline Geç</h2>
-      <p>Devam etmek için parolanızı tekrar girin.</p>
-      <div class="form-error" id="modal-error"></div>
-      <form id="settings-form">
-        <div class="form-row">
-          <label for="modal-password">Parola</label>
-          <input type="password" id="modal-password" autocomplete="current-password" required />
-        </div>
-        <div class="modal-actions">
-          <button type="button" class="btn btn-secondary" id="modal-cancel">İptal</button>
-          <button type="submit" class="btn" id="modal-submit">Devam Et</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <a class="settings-btn" id="settings-btn" title="Yönetici Girişi" aria-label="Yönetici Girişi">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <circle cx="12" cy="12" r="3"></circle>
-      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-    </svg>
-  </a>
-
   <div class="bg-shape bg-shape-1"></div>
   <div class="bg-shape bg-shape-2"></div>
 
-  <script type="module" src="/src/board.js"></script>
+  <script type="module" src="/src/demo.js"></script>
 </body>
 
 </html>

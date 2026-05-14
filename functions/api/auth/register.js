@@ -3,6 +3,10 @@ import { json, error, readBody, isSecureRequest } from '../../_lib/http.js';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const SLUG_RE = /^[a-z0-9](?:[a-z0-9-]{1,38}[a-z0-9])?$/;
+const RESERVED_SLUGS = new Set([
+  'demo', 'admin', 'api', 'giris', 'kayit', 'login', 'register',
+  'assets', 'static', 'public', 'www', 'mail', 'help', 'about'
+]);
 
 export const onRequestPost = async ({ request, env }) => {
   const body = await readBody(request);
@@ -18,6 +22,9 @@ export const onRequestPost = async ({ request, env }) => {
   if (name.length < 2) return error(400, 'Okul adı en az 2 karakter olmalı');
   if (!SLUG_RE.test(slug)) {
     return error(400, 'Kısa ad sadece küçük harf, rakam ve - içerebilir (örn. sanliurfa-bilsem)');
+  }
+  if (RESERVED_SLUGS.has(slug)) {
+    return error(400, 'Bu kısa ad sistemde rezerve — başka bir ad seçin');
   }
 
   // Çakışma kontrolü
