@@ -5,7 +5,7 @@ pages_build_output_dir = "dist"
 [[d1_databases]]
 binding = "DB"
 database_name = "okul-panosu"
-database_id = "REPLACE_WITH_REAL_ID_AFTER_CREATE"
+database_id = "93e8b49f-a709-4dd5-9239-95f84fccef9d"
 
 # JWT_SECRET production'da `wrangler pages secret put JWT_SECRET` ile set edilecek.
 # Lokal geliştirme için .dev.vars dosyasında JWT_SECRET=... yazın.
