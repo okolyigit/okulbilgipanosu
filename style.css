@@ -1103,4 +1103,18 @@ body.landing-page {
   .admin-header { flex-direction: column; align-items: flex-start; gap: 8px; }
   .list-item { flex-direction: column; }
   .list-item-actions { align-self: flex-end; }
+
+  body.auth-page { padding: 12px; }
+  .auth-card { padding: 28px 22px; border-radius: 16px; }
+  .auth-card h1 { font-size: 1.7rem; }
+  .auth-card > p { font-size: 0.95rem; margin-bottom: 20px; }
+  .form-row { margin-bottom: 16px; }
+  .form-row input,
+  .form-row textarea,
+  .form-row select { padding: 12px 14px; font-size: 1rem; }
+}
+
+@media (max-width: 380px) {
+  .auth-card { padding: 22px 16px; }
+  .auth-card h1 { font-size: 1.5rem; }
 }
