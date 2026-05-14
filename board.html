@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Okul Bilgi Panosu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div class="dashboard-content" id="dashboard">
+
+    <header class="header glass-panel">
+      <div class="logo-area">
+        <div class="logo-icon" id="logo-icon">🏫</div>
+        <div class="school-info">
+          <h1 class="school-name" id="school-name">Yükleniyor...</h1>
+          <p class="school-motto" id="school-motto"></p>
+        </div>
+      </div>
+      <div class="header-weather">
+        <div class="header-weather-icon">⛅</div>
+        <div class="header-weather-info">
+          <div class="header-weather-temp">18°C</div>
+          <div class="header-weather-desc" id="weather-desc">—</div>
+        </div>
+      </div>
+      <div class="time-area">
+        <div class="clock" id="clock">00:00:00</div>
+        <div class="date" id="date">Yükleniyor...</div>
+      </div>
+    </header>
+
+    <div class="main-layout">
+      <main class="content-zone glass-panel">
+        <div class="slider-container" id="slider"></div>
+        <div class="slider-indicators" id="slider-indicators"></div>
+      </main>
+
+      <aside class="sidebar-zone">
+        <div class="menu-widget glass-panel">
+          <div class="menu-header">
+            <h3>Nöbetçi Öğretmenler</h3>
+            <span class="menu-icon">👨‍🏫</span>
+          </div>
+          <ul class="menu-list duty-list" id="duty-list"></ul>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="footer-ticker glass-panel">
+      <div class="ticker-label">DUYURULAR</div>
+      <div class="ticker-wrap">
+        <div class="ticker-content" id="ticker"></div>
+      </div>
+    </footer>
+  </div>
+
+  <a class="settings-btn" id="settings-btn" title="Yönetici Girişi" aria-label="Yönetici Girişi">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="3"></circle>
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+    </svg>
+  </a>
+
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+
+  <script type="module" src="/src/board.js"></script>
+</body>
+
+</html>

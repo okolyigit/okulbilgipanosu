@@ -1,0 +1,19 @@
+{
+  "name": "okul-panosu",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "pages:dev": "wrangler pages dev --proxy 5173 --local -- npm run dev",
+    "d1:init": "wrangler d1 execute okul-panosu --local --file=./schema.sql",
+    "d1:init:remote": "wrangler d1 execute okul-panosu --remote --file=./schema.sql",
+    "seed": "node scripts/seed.mjs"
+  },
+  "devDependencies": {
+    "vite": "^8.0.12",
+    "wrangler": "^3.90.0"
+  }
+}

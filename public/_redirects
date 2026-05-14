@@ -1,0 +1,13 @@
+# Cloudflare Pages rewrite kuralları.
+# 200 status = URL'i değiştirmeden HTML dosyasını servis et.
+# Hedefler uzantısız olmalı (CF .html'i strip ediyor).
+# /api/* otomatik olarak Pages Functions'a düşer.
+
+/giris         /login    200
+/kayit         /register 200
+
+# Eski okul-özel login URL'i artık tek /giris sayfasına yönlensin
+/:slug/login   /giris    301
+
+/:slug/admin   /admin    200
+/:slug         /board    200
